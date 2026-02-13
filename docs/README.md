@@ -1,12 +1,12 @@
 <p align="center">
-	<img width="256" height="256" src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/demo/assets/connection-state-android.png">
+	<img width="256" height="256" src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/demo/assets/connection-state-android.png">
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img width="256" height="256" src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/demo/assets/connection-state-ios.png">
+	<img width="256" height="256" src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/demo/assets/connection-state-ios.png">
 </p>
 
 ---
 
-# <img src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/addon/icon.png" width="24"> Godot Connection State Plugin
+# <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="24"> Godot Connection State Plugin
 
 A Godot plugin that provides a unified GDScript interface for getting information on mobile device connections on **Android** and **iOS**.
 
@@ -17,7 +17,7 @@ A Godot plugin that provides a unified GDScript interface for getting informatio
 
 ---
 
-## <img src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/addon/icon.png" width="20"> Table of Contents
+## <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="20"> Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
 - [Signals](#signals)
@@ -33,7 +33,7 @@ A Godot plugin that provides a unified GDScript interface for getting informatio
 
 <a name="installation"></a>
 
-## <img src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/addon/icon.png" width="20"> Installation
+## <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="20"> Installation
 _Before installing this plugin, make sure to uninstall any previous versions of the same plugin._
 
 _If installing both Android and iOS versions of the plugin in the same project, then make sure that both versions use the same addon interface version._
@@ -42,7 +42,7 @@ There are 2 ways to install the `ConnectionState` plugin into your project:
 - Through the Godot Editor's AssetLib
 - Manually by downloading archives from Github
 
-### <img src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/addon/icon.png" width="18"> Installing via AssetLib
+### <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="18"> Installing via AssetLib
 Steps:
 - search for and select the `ConnectionState` plugin in Godot Editor
 - click `Download` button
@@ -52,10 +52,10 @@ Steps:
 	- click `Install` button
 - enable the plugin via the `Plugins` tab of `Project->Project Settings...` menu, in the Godot Editor
 
-#### <img src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/addon/icon.png" width="16"> Installing both Android and iOS versions of the plugin in the same project
+#### <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="16"> Installing both Android and iOS versions of the plugin in the same project
 When installing via AssetLib, the installer may display a warning that states "_[x number of]_ files conflict with your project and won't be installed." You can ignore this warning since both versions use the same addon code.
 
-### <img src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/addon/icon.png" width="18"> Installing manually
+### <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="18"> Installing manually
 Steps:
 - download release archive from Github
 - unzip the release archive
@@ -67,7 +67,7 @@ Steps:
 <a name="usage"></a>
 
 
-## <img src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/addon/icon.png" width="20"> Usage
+## <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="20"> Usage
 Add `ConnectionState` node to your main scene or an autoload global scene.
 
 - use the `ConnectionState` node's `get_connection_state()` method to get information on all available connections
@@ -101,7 +101,7 @@ func _on_connection_lost(info: ConnectionInfo):
 
 <a name="signals"></a>
 
-## <img src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/addon/icon.png" width="20"> Signals
+## <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="20"> Signals
 - register listeners to the following signals of the `ConnectionState` node:
 	- `connection_established(a_connection_info: ConnectionInfo)`
 	- `connection_lost(a_connection_info: ConnectionInfo)`
@@ -110,16 +110,18 @@ func _on_connection_lost(info: ConnectionInfo):
 
 <a name="methods"></a>
 
-## <img src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/addon/icon.png" width="20"> Methods
+## <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="20"> Methods
 - `get_connection_state() -> Array[ConnectionInfo]` - returns an array of `ConnectionInfo` objects
 
 ---
 
 <a name="classes"></a>
 
-## <img src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/addon/icon.png" width="20"> Classes
+## <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="20"> Classes
 
-### <img src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/addon/icon.png" width="16"> ConnectionInfo
+This section documents the GDScript interface classes implemented and exposed by the plugin.
+
+### <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="16"> ConnectionInfo
 - Encapsulates network connection data that is provided by the mobile OS.
 - Properties:
 	- `connection_type`: type of network connection: WIFI, Cellular, Ethernet, Bluetooth, VPN, Loopback, or Unknown
@@ -130,7 +132,7 @@ func _on_connection_lost(info: ConnectionInfo):
 
 <a name="platform-specific-notes"></a>
 
-## <img src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/addon/icon.png" width="20"> Platform-Specific Notes
+## <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="20"> Platform-Specific Notes
 
 ### Android
 - Download Android export template and enable gradle build from export settings
@@ -151,39 +153,43 @@ func _on_connection_lost(info: ConnectionInfo):
 
 <a name="links"></a>
 
-# <img src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/addon/icon.png" width="24"> Links
+# <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="24"> Links
 
 - [AssetLib Entry Android](https://godotengine.org/asset-library/asset/4582)
 - [AssetLib Entry iOS](https://godotengine.org/asset-library/asset/4581)
 
 ---
 
-# <img src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/addon/icon.png" width="24"> All Plugins
+# <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="24"> All Plugins
 
 | Plugin | Android | iOS | Free | Open Source | License |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| [Notification Scheduler](https://github.com/godot-sdk-integrations/godot-notification-scheduler) | ✅ | ✅ | ✅ | ✅ | MIT |
 | [Admob](https://github.com/godot-sdk-integrations/godot-admob) | ✅ | ✅ | ✅ | ✅ | MIT |
-| [Deeplink](https://github.com/godot-sdk-integrations/godot-deeplink) | ✅ | ✅ | ✅ | ✅ | MIT |
-| [Share](https://github.com/godot-sdk-integrations/godot-share) | ✅ | ✅ | ✅ | ✅ | MIT |
-| [In-App Review](https://github.com/godot-sdk-integrations/godot-inapp-review) | ✅ | ✅ | ✅ | ✅ | MIT |
-| [Connection State](https://github.com/godot-sdk-integrations/godot-connection-state) | ✅ | ✅ | ✅ | ✅ | MIT |
-| [OAuth 2.0](https://github.com/godot-sdk-integrations/godot-oauth2) | ✅ | ✅ | ✅ | ✅ | MIT |
+| [Notification Scheduler](https://github.com/godot-mobile-plugins/godot-notification-scheduler) | ✅ | ✅ | ✅ | ✅ | MIT |
+| [Deeplink](https://github.com/godot-mobile-plugins/godot-deeplink) | ✅ | ✅ | ✅ | ✅ | MIT |
+| [Share](https://github.com/godot-mobile-plugins/godot-share) | ✅ | ✅ | ✅ | ✅ | MIT |
+| [In-App Review](https://github.com/godot-mobile-plugins/godot-inapp-review) | ✅ | ✅ | ✅ | ✅ | MIT |
+| [Native Camera](https://github.com/godot-mobile-plugins/godot-native-camera) | ✅ | ✅ | ✅ | ✅ | MIT |
+| [Connection State](https://github.com/godot-mobile-plugins/godot-connection-state) | ✅ | ✅ | ✅ | ✅ | MIT |
+| [OAuth 2.0](https://github.com/godot-mobile-plugins/godot-oauth2) | ✅ | ✅ | ✅ | ✅ | MIT |
+| [QR](https://github.com/godot-mobile-plugins/godot-qr) | ✅ | ✅ | ✅ | ✅ | MIT |
 
 ---
 
 <a name="credits"></a>
 
-# <img src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/addon/icon.png" width="24"> Credits
+# <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="24"> Credits
 
 Developed by [Cengiz](https://github.com/cengiz-pz)
 
-Original repository: [Godot Connection State Plugin](https://github.com/godot-sdk-integrations/godot-connection-state)
+Based on [Godot Mobile Plugin Template](https://github.com/godot-mobile-plugins/godot-plugin-template)
+
+Original repository: [Godot Connection State Plugin](https://github.com/godot-mobile-plugins/godot-connection-state)
 
 ---
 
 <a name="contributing"></a>
 
-# <img src="https://raw.githubusercontent.com/godot-sdk-integrations/godot-connection-state/main/addon/icon.png" width="24"> Contributing
+# <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="24"> Contributing
 
-See [our guide](https://github.com/godot-sdk-integrations/godot-connection-state?tab=contributing-ov-file) if you would like to contribute to this project.
+See [our guide](https://github.com/godot-mobile-plugins/godot-connection-state?tab=contributing-ov-file) if you would like to contribute to this project.

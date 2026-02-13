@@ -3,6 +3,7 @@
 #
 
 @tool
+@icon("icon.png")
 class_name ConnectionState extends Node
 
 

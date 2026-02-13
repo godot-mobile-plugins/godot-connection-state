@@ -4,8 +4,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "connection_state_plugin_bootstrap.h"
 #import "connection_state_plugin.h"
-#import "connection_state_plugin_implementation.h"
 #import "connection_state_logger.h"
 
 #import "core/config/engine.h"

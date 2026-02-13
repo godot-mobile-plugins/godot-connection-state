@@ -2,8 +2,8 @@
 // © 2025-present https://github.com/cengiz-pz
 //
 
-#ifndef connection_state_plugin_implementation_h
-#define connection_state_plugin_implementation_h
+#ifndef connection_state_plugin_h
+#define connection_state_plugin_h
 
 #import <Foundation/Foundation.h>
 
@@ -35,4 +35,4 @@ public:
 	~ConnectionStatePlugin();
 };
 
-#endif /* connection_state_plugin_implementation_h */
+#endif /* connection_state_plugin_h */
