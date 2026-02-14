@@ -18,6 +18,8 @@ A Godot plugin that provides a unified GDScript interface for getting informatio
 ---
 
 ## <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="20"> Table of Contents
+
+- [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Signals](#signals)
@@ -28,6 +30,18 @@ A Godot plugin that provides a unified GDScript interface for getting informatio
 - [All Plugins](#all-plugins)
 - [Credits](#credits)
 - [Contributing](#contributing)
+
+---
+
+<a name="demo"></a>
+
+## <img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/addon/src/icon.png" width="20"> Demo
+
+Try the **demo app** located in the `demo` directory.
+
+<p align="center">
+	<img src="https://raw.githubusercontent.com/godot-mobile-plugins/godot-connection-state/main/docs/assets/demo_screenshot_android_111.gif" width="243">
+</p>
 
 ---
 
@@ -173,6 +187,7 @@ This section documents the GDScript interface classes implemented and exposed by
 | [Connection State](https://github.com/godot-mobile-plugins/godot-connection-state) | ✅ | ✅ | ✅ | ✅ | MIT |
 | [OAuth 2.0](https://github.com/godot-mobile-plugins/godot-oauth2) | ✅ | ✅ | ✅ | ✅ | MIT |
 | [QR](https://github.com/godot-mobile-plugins/godot-qr) | ✅ | ✅ | ✅ | ✅ | MIT |
+| [Firebase](https://github.com/godot-mobile-plugins/godot-firebase) | ✅ | ✅ | ✅ | ✅ | MIT |
 
 ---
 

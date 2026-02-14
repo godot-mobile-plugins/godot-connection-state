@@ -3,14 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07799B802EEE73CC00619332 /* ConnectionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07799B7F2EEE73CC00619332 /* ConnectionState.swift */; };
-		078173322EF018C10087ACA0 /* connection_state_logger.mm in Sources */ = {isa = PBXBuildFile; fileRef = 078173312EF018C00087ACA0 /* connection_state_logger.mm */; };
-		90CAAA9924E71FF10013969F /* connection_state_plugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90CAAA9824E71FF10013969F /* connection_state_plugin.mm */; };
-		90CAAAA424E724C50013969F /* connection_state_plugin_implementation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90CAAAA324E724C50013969F /* connection_state_plugin_implementation.mm */; };
+		07DF21572F3ED7CE00E2725C /* connection_state_logger.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07DF214F2F3ED7CE00E2725C /* connection_state_logger.mm */; };
+		07DF21582F3ED7CE00E2725C /* connection_info.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07DF214B2F3ED7CE00E2725C /* connection_info.mm */; };
+		07DF21592F3ED7CE00E2725C /* connection_state_plugin_bootstrap.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07DF21532F3ED7CE00E2725C /* connection_state_plugin_bootstrap.mm */; };
+		07DF215A2F3ED7CE00E2725C /* ConnectionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DF21552F3ED7CE00E2725C /* ConnectionState.swift */; };
+		07DF215B2F3ED7CE00E2725C /* connection_state_plugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07DF21512F3ED7CE00E2725C /* connection_state_plugin.mm */; };
 		94A1B0B2910D06DA0F4D3D3C /* Pods_connection_state_plugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380C444E6383B0C8ACA7CA7D /* Pods_connection_state_plugin.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,25 +28,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		073B52C32ECF241C0063663B /* connection_state_plugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "connection_state_plugin-Bridging-Header.h"; sourceTree = "<group>"; };
-		07787D0C2EDA6C22009B6F5F /* connection_state_logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = connection_state_logger.h; sourceTree = "<group>"; };
-		07799B7F2EEE73CC00619332 /* ConnectionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionState.swift; sourceTree = "<group>"; };
-		078173312EF018C00087ACA0 /* connection_state_logger.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = connection_state_logger.mm; sourceTree = "<group>"; };
+		07DF214A2F3ED7CE00E2725C /* connection_info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = connection_info.h; sourceTree = "<group>"; };
+		07DF214B2F3ED7CE00E2725C /* connection_info.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = connection_info.mm; sourceTree = "<group>"; };
+		07DF214C2F3ED7CE00E2725C /* connection_type.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = connection_type.h; sourceTree = "<group>"; };
+		07DF214E2F3ED7CE00E2725C /* connection_state_logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = connection_state_logger.h; sourceTree = "<group>"; };
+		07DF214F2F3ED7CE00E2725C /* connection_state_logger.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = connection_state_logger.mm; sourceTree = "<group>"; };
+		07DF21502F3ED7CE00E2725C /* connection_state_plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = connection_state_plugin.h; sourceTree = "<group>"; };
+		07DF21512F3ED7CE00E2725C /* connection_state_plugin.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = connection_state_plugin.mm; sourceTree = "<group>"; };
+		07DF21522F3ED7CE00E2725C /* connection_state_plugin_bootstrap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = connection_state_plugin_bootstrap.h; sourceTree = "<group>"; };
+		07DF21532F3ED7CE00E2725C /* connection_state_plugin_bootstrap.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = connection_state_plugin_bootstrap.mm; sourceTree = "<group>"; };
+		07DF21542F3ED7CE00E2725C /* connection_state_plugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "connection_state_plugin-Bridging-Header.h"; sourceTree = "<group>"; };
+		07DF21552F3ED7CE00E2725C /* ConnectionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionState.swift; sourceTree = "<group>"; };
 		1A3D1E30D9DC57319C20B62B /* Pods-connection_state_plugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connection_state_plugin.release.xcconfig"; path = "Target Support Files/Pods-connection_state_plugin/Pods-connection_state_plugin.release.xcconfig"; sourceTree = "<group>"; };
 		380C444E6383B0C8ACA7CA7D /* Pods_connection_state_plugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_connection_state_plugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		403D7C7BCFBA671DEF15AE95 /* Pods-connection_state_plugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connection_state_plugin.debug.xcconfig"; path = "Target Support Files/Pods-connection_state_plugin/Pods-connection_state_plugin.debug.xcconfig"; sourceTree = "<group>"; };
 		90CAAA9424E71FF10013969F /* libconnection_state_plugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libconnection_state_plugin.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		90CAAA9724E71FF10013969F /* connection_state_plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = connection_state_plugin.h; sourceTree = "<group>"; };
-		90CAAA9824E71FF10013969F /* connection_state_plugin.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = connection_state_plugin.mm; sourceTree = "<group>"; };
-		90CAAAA324E724C50013969F /* connection_state_plugin_implementation.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = connection_state_plugin_implementation.mm; sourceTree = "<group>"; };
-		90CAAAA524E724D00013969F /* connection_state_plugin_implementation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = connection_state_plugin_implementation.h; sourceTree = "<group>"; };
-		AAE936A0178A8EA9BB753CEA /* Pods-connection_state_plugin_implementation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connection_state_plugin_implementation.debug.xcconfig"; path = "Target Support Files/Pods-inapp_review_plugin/Pods-connection_state_plugin_implementation.debug.xcconfig"; sourceTree = "<group>"; };
-		D5F7A9D28867FD798F31BF3B /* Pods-connection_state_plugin_implementation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connection_state_plugin_implementation.release.xcconfig"; path = "Target Support Files/Pods-inapp_review_plugin/Pods-connection_state_plugin_implementation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		076EA9342EF0ECE000CE67AA /* model */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = model; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		90CAAA9124E71FF10013969F /* Frameworks */ = {
@@ -59,13 +57,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07DF214D2F3ED7CE00E2725C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				07DF214A2F3ED7CE00E2725C /* connection_info.h */,
+				07DF214B2F3ED7CE00E2725C /* connection_info.mm */,
+				07DF214C2F3ED7CE00E2725C /* connection_type.h */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		07DF21562F3ED7CE00E2725C /* src */ = {
+			isa = PBXGroup;
+			children = (
+				07DF214D2F3ED7CE00E2725C /* model */,
+				07DF214E2F3ED7CE00E2725C /* connection_state_logger.h */,
+				07DF214F2F3ED7CE00E2725C /* connection_state_logger.mm */,
+				07DF21502F3ED7CE00E2725C /* connection_state_plugin.h */,
+				07DF21512F3ED7CE00E2725C /* connection_state_plugin.mm */,
+				07DF21522F3ED7CE00E2725C /* connection_state_plugin_bootstrap.h */,
+				07DF21532F3ED7CE00E2725C /* connection_state_plugin_bootstrap.mm */,
+				07DF21542F3ED7CE00E2725C /* connection_state_plugin-Bridging-Header.h */,
+				07DF21552F3ED7CE00E2725C /* ConnectionState.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		66EA7AD27171A8F93A267403 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				403D7C7BCFBA671DEF15AE95 /* Pods-connection_state_plugin.debug.xcconfig */,
 				1A3D1E30D9DC57319C20B62B /* Pods-connection_state_plugin.release.xcconfig */,
-				AAE936A0178A8EA9BB753CEA /* Pods-connection_state_plugin_implementation.debug.xcconfig */,
-				D5F7A9D28867FD798F31BF3B /* Pods-connection_state_plugin_implementation.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -73,7 +95,7 @@
 		90CAAA8B24E71FF10013969F = {
 			isa = PBXGroup;
 			children = (
-				90CAAA9624E71FF10013969F /* connection_state */,
+				07DF21562F3ED7CE00E2725C /* src */,
 				90CAAA9524E71FF10013969F /* Products */,
 				90CAAAA824E72A8A0013969F /* Frameworks */,
 				66EA7AD27171A8F93A267403 /* Pods */,
@@ -86,22 +108,6 @@
 				90CAAA9424E71FF10013969F /* libconnection_state_plugin.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		90CAAA9624E71FF10013969F /* connection_state */ = {
-			isa = PBXGroup;
-			children = (
-				076EA9342EF0ECE000CE67AA /* model */,
-				07799B7F2EEE73CC00619332 /* ConnectionState.swift */,
-				07787D0C2EDA6C22009B6F5F /* connection_state_logger.h */,
-				078173312EF018C00087ACA0 /* connection_state_logger.mm */,
-				073B52C32ECF241C0063663B /* connection_state_plugin-Bridging-Header.h */,
-				90CAAA9724E71FF10013969F /* connection_state_plugin.h */,
-				90CAAA9824E71FF10013969F /* connection_state_plugin.mm */,
-				90CAAAA524E724D00013969F /* connection_state_plugin_implementation.h */,
-				90CAAAA324E724C50013969F /* connection_state_plugin_implementation.mm */,
-			);
-			path = connection_state;
 			sourceTree = "<group>";
 		};
 		90CAAAA824E72A8A0013969F /* Frameworks */ = {
@@ -127,9 +133,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				076EA9342EF0ECE000CE67AA /* model */,
 			);
 			name = connection_state_plugin;
 			productName = connection_state_plugin;
@@ -199,10 +202,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90CAAAA424E724C50013969F /* connection_state_plugin_implementation.mm in Sources */,
-				078173322EF018C10087ACA0 /* connection_state_logger.mm in Sources */,
-				07799B802EEE73CC00619332 /* ConnectionState.swift in Sources */,
-				90CAAA9924E71FF10013969F /* connection_state_plugin.mm in Sources */,
+				07DF21572F3ED7CE00E2725C /* connection_state_logger.mm in Sources */,
+				07DF21582F3ED7CE00E2725C /* connection_info.mm in Sources */,
+				07DF21592F3ED7CE00E2725C /* connection_state_plugin_bootstrap.mm in Sources */,
+				07DF215A2F3ED7CE00E2725C /* ConnectionState.swift in Sources */,
+				07DF215B2F3ED7CE00E2725C /* connection_state_plugin.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,9 +393,7 @@
 					"-isystem",
 					"$(SRCROOT)/godot/platform/ios",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "src/connection_state_plugin-Bridging-Header.h";
@@ -462,9 +464,7 @@
 					"-isystem",
 					"$(SRCROOT)/godot/platform/ios",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "src/connection_state_plugin-Bridging-Header.h";
