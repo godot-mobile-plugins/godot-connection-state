@@ -20,7 +20,7 @@ public class ConnectionInfo {
 
 		private final int value;
 
-		private ConnectionType(int value) {
+		ConnectionType(int value) {
 			this.value = value;
 		}
 

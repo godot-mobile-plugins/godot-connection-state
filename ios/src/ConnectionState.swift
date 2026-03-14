@@ -166,7 +166,8 @@ import Network
 				// Commit state change
 				setInternalState(for: type, isConnected: false, lastInfo: nil)
 
-				// Only emit if it was NOT the active path before the loss as `handleDefaultUpdate` already handled the primary signal
+				// Only emit if it was NOT the active path before the loss as `handleDefaultUpdate` already handled the
+				// primary signal
 				if !wasActive {
 					onConnectionLost?(info)
 				}
@@ -176,12 +177,12 @@ import Network
 
 	private func handleSpecificUpdate(path: NWPath,
 									interfaceType: NWInterface.InterfaceType) {
-		
+
 		let isSatisfied = path.status == .satisfied
 		let currentState = getInternalState(for: interfaceType)
 		let wasConnected = currentState.isConnected
 		let wasActive = currentState.lastInfo?[Self.isActiveKey] as? Bool ?? false
-		
+
 		if !isSatisfied && wasConnected {
 			// Connection lost
 			var info: [String: Any]

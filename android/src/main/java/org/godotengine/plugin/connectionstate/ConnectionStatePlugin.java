@@ -7,7 +7,6 @@ package org.godotengine.plugin.connectionstate;
 import android.app.Activity;
 import android.content.Context;
 import android.net.ConnectivityManager;
-import android.net.LinkProperties;
 import android.net.Network;
 import android.net.NetworkCapabilities;
 import android.net.NetworkRequest;
@@ -160,17 +159,13 @@ public class ConnectionStatePlugin extends GodotPlugin {
 		if (caps != null) {
 			if (caps.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
 				type = ConnectionType.WIFI;
-			}
-			else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) {
+			} else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) {
 				type = ConnectionType.CELLULAR;
-			}
-			else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)) {
+			} else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)) {
 				type = ConnectionType.ETHERNET;
-			}
-			else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_BLUETOOTH)) {
+			} else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_BLUETOOTH)) {
 				type = ConnectionType.BLUETOOTH;
-			}
-			else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_VPN)) {
+			} else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_VPN)) {
 				type = ConnectionType.VPN;
 			}
 
