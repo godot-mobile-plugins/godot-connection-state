@@ -4,8 +4,6 @@
 
 package org.godotengine.plugin.connectionstate.model;
 
-import java.util.List;
-
 import org.godotengine.godot.Dictionary;
 
 
@@ -22,7 +20,7 @@ public class ConnectionInfo {
 
 		private final int value;
 
-		private ConnectionType(int value) {
+		ConnectionType(int value) {
 			this.value = value;
 		}
 

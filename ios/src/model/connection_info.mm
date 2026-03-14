@@ -10,13 +10,13 @@ static String const kConnectionTypeProperty = String([[ConnectionState connectio
 static String const kIsActiveProperty = String([[ConnectionState isActiveKey] UTF8String]);
 static String const kIsMeteredProperty = String([[ConnectionState isMeteredKey] UTF8String]);
 
-static NSString * const nsConnectionTypeProperty = [ConnectionState connectionTypeKey];
-static NSString * const nsIsActiveProperty = [ConnectionState isActiveKey];
-static NSString * const nsIsMeteredProperty = [ConnectionState isMeteredKey];
+static NSString *const nsConnectionTypeProperty = [ConnectionState connectionTypeKey];
+static NSString *const nsIsActiveProperty = [ConnectionState isActiveKey];
+static NSString *const nsIsMeteredProperty = [ConnectionState isMeteredKey];
 
 @interface ConnectionInfo ()
 
-@property (nonatomic) Dictionary data;
+@property(nonatomic) Dictionary data;
 
 @end
 
@@ -29,7 +29,6 @@ static NSString * const nsIsMeteredProperty = [ConnectionState isMeteredKey];
 		_data[kConnectionTypeProperty] = [nsDict[nsConnectionTypeProperty] intValue];
 		_data[kIsActiveProperty] = [nsDict[nsIsActiveProperty] boolValue];
 		_data[kIsMeteredProperty] = [nsDict[nsIsMeteredProperty] boolValue];
-
 	}
 	return self;
 }

@@ -4,17 +4,8 @@
 
 class_name ConnectionInfo extends RefCounted
 
-
 # Connection Type Enums (Shared across platforms)
-enum ConnectionType {
-	UNKNOWN = 0,
-	WIFI = 1,
-	CELLULAR = 2,
-	ETHERNET = 3,
-	BLUETOOTH = 4,
-	VPN = 5,
-	LOOPBACK = 6
-}
+enum ConnectionType { UNKNOWN = 0, WIFI = 1, CELLULAR = 2, ETHERNET = 3, BLUETOOTH = 4, VPN = 5, LOOPBACK = 6 }
 
 const CONNECTION_TYPE_PROPERTY: String = "connection_type"
 const IS_ACTIVE_PROPERTY: String = "is_active"
@@ -28,8 +19,11 @@ func _init(a_data: Dictionary):
 
 
 func get_connection_type() -> ConnectionType:
-	return _data[CONNECTION_TYPE_PROPERTY] as ConnectionType if _data.has(CONNECTION_TYPE_PROPERTY) \
-			else ConnectionType.UNKNOWN
+	return (
+		_data[CONNECTION_TYPE_PROPERTY] as ConnectionType
+		if _data.has(CONNECTION_TYPE_PROPERTY)
+		else ConnectionType.UNKNOWN
+	)
 
 
 func is_active() -> bool:

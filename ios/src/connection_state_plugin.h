@@ -7,22 +7,19 @@
 
 #import <Foundation/Foundation.h>
 
-#include "core/object/object.h"
 #include "core/object/class_db.h"
-
+#include "core/object/object.h"
 
 @class ConnectionState;
 
-
 extern const String CONNECTION_ESTABLISHED_SIGNAL;
 extern const String CONNECTION_LOST_SIGNAL;
-
 
 class ConnectionStatePlugin : public Object {
 	GDCLASS(ConnectionStatePlugin, Object);
 
 private:
-	static ConnectionStatePlugin* instance; // Singleton instance
+	static ConnectionStatePlugin *instance; // Singleton instance
 	ConnectionState *connection_state_monitor;
 
 	Array get_connection_state();
@@ -30,7 +27,6 @@ private:
 	static void _bind_methods();
 
 public:
-
 	ConnectionStatePlugin();
 	~ConnectionStatePlugin();
 };

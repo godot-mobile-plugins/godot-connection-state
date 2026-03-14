@@ -6,13 +6,10 @@
 @icon("icon.png")
 class_name ConnectionState extends Node
 
-
 signal connection_established(a_info: ConnectionInfo)
 signal connection_lost(a_info: ConnectionInfo)
 
-
 const PLUGIN_SINGLETON_NAME: String = "@pluginName@"
-
 
 var _plugin_singleton: Object
 
