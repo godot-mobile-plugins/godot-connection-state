@@ -4,8 +4,6 @@
 
 package org.godotengine.plugin.connectionstate.model;
 
-import java.util.List;
-
 import org.godotengine.godot.Dictionary;
 
 

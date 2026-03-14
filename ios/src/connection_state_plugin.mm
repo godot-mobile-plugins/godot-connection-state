@@ -9,13 +9,10 @@
 #import "connection_info.h"
 #import "connection_state_logger.h"
 
-
 const String CONNECTION_ESTABLISHED_SIGNAL = "connection_established";
 const String CONNECTION_LOST_SIGNAL = "connection_lost";
 
-
-ConnectionStatePlugin* ConnectionStatePlugin::instance = NULL;
-
+ConnectionStatePlugin *ConnectionStatePlugin::instance = NULL;
 
 void ConnectionStatePlugin::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_connection_state"), &ConnectionStatePlugin::get_connection_state);
@@ -60,7 +57,7 @@ ConnectionStatePlugin::ConnectionStatePlugin() {
 	connection_state_monitor.onConnectionLost = ^(NSDictionary *info) {
 		// Capture 'this' pointer safely for use inside the C++ lambda bridge
 		ConnectionStatePlugin *plugin_instance = instance;
-		
+
 		ConnectionInfo *connectionInfo = [[ConnectionInfo alloc] initWithDictionary:info];
 
 		plugin_instance->call_deferred("emit_signal", CONNECTION_LOST_SIGNAL, [connectionInfo getRawData]);

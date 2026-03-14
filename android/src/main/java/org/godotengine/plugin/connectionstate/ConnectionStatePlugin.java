@@ -70,7 +70,9 @@ public class ConnectionStatePlugin extends GodotPlugin {
 	}
 
 	private void registerNetworkCallback() {
-		if (connectivityManager == null) return;
+		if (connectivityManager == null) {
+			return;
+		}
 
 		NetworkRequest request = new NetworkRequest.Builder()
 				.addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
@@ -120,7 +122,9 @@ public class ConnectionStatePlugin extends GodotPlugin {
 	}
 
 	private void updateNetworkCache(Network network) {
-		if (connectivityManager == null) return;
+		if (connectivityManager == null) {
+			return;
+		}
 
 		NetworkCapabilities caps = connectivityManager.getNetworkCapabilities(network);
 		if (caps != null && caps.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)) {
@@ -154,11 +158,21 @@ public class ConnectionStatePlugin extends GodotPlugin {
 		boolean isMetered = false;
 
 		if (caps != null) {
-			if (caps.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) type = ConnectionType.WIFI;
-			else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) type = ConnectionType.CELLULAR;
-			else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)) type = ConnectionType.ETHERNET;
-			else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_BLUETOOTH)) type = ConnectionType.BLUETOOTH;
-			else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_VPN)) type = ConnectionType.VPN;
+			if (caps.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
+				type = ConnectionType.WIFI;
+			}
+			else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) {
+				type = ConnectionType.CELLULAR;
+			}
+			else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)) {
+				type = ConnectionType.ETHERNET;
+			}
+			else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_BLUETOOTH)) {
+				type = ConnectionType.BLUETOOTH;
+			}
+			else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_VPN)) {
+				type = ConnectionType.VPN;
+			}
 
 			isMetered = !caps.hasCapability(NetworkCapabilities.NET_CAPABILITY_NOT_METERED);
 		}
