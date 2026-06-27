@@ -44,6 +44,8 @@ public class ConnectionStatePlugin extends GodotPlugin {
 	// Key: Network object (unique ID), Value: ConnectionInfo
 	private final Map<Network, ConnectionInfo> activeNetworkCache = new ConcurrentHashMap<>();
 
+	private boolean networkCallbackRegistered = false;
+
 	public ConnectionStatePlugin(Godot godot) {
 		super(godot);
 	}
@@ -64,8 +66,15 @@ public class ConnectionStatePlugin extends GodotPlugin {
 	@Override
 	public View onMainCreate(Activity activity) {
 		connectivityManager = (ConnectivityManager) activity.getSystemService(Context.CONNECTIVITY_SERVICE);
-		registerNetworkCallback();
 		return null;
+	}
+
+	@Override
+	public void onGodotSetupCompleted() {
+		if (!networkCallbackRegistered) {
+			registerNetworkCallback();
+			networkCallbackRegistered = true;
+		}
 	}
 
 	private void registerNetworkCallback() {

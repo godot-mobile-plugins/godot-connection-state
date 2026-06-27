@@ -1,5 +1,5 @@
 {
-	"version": "1.0",
+	"version": "1.2",
 	"admob": {
 		"name": "AdMob Plugin",
 		"directory": "AdmobPlugin",
@@ -41,7 +41,7 @@
 		"repository": "https://github.com/godot-mobile-plugins/godot-connection-state",
 		"versions": [
 			{
-				"version": "1.2",
+				"version": "1.2.1",
 				"min_godot": "4.7",
 				"ios": true,
 				"android": true,
@@ -74,7 +74,7 @@
 		"repository": "https://github.com/godot-mobile-plugins/godot-deeplink",
 		"versions": [
 			{
-				"version": "6.0",
+				"version": "6.0.1",
 				"min_godot": "4.7",
 				"ios": true,
 				"android": true,
@@ -190,7 +190,7 @@
 		"repository": "https://github.com/godot-mobile-plugins/godot-notification-scheduler",
 		"versions": [
 			{
-				"version": "5.3",
+				"version": "6.0",
 				"min_godot": "4.7",
 				"ios": true,
 				"android": true,
